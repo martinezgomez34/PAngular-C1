@@ -1,0 +1,23 @@
+<div class="grid-container">
+    <h1 class="mat-h1"></h1>
+    <mat-card class="dashboard-card">
+    <mat-card-header>
+      <mat-card-title>
+        Card Alumnos
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="dashboard-card-content">
+        
+        @for (elementStudent of studentsArray; track elementStudent) {
+            <div>
+               {{elementStudent.id}}
+                <a (click)="showName(elementStudent.name)">{{elementStudent.name}}</a>
+                    <button mat-button (click)="deletedStudent(elementStudent.id)">Deleted</button>
+            </div>                 
+        }
+        <app-form-student #formStudent></app-form-student>
+        <div><button (click)="formStudent.guardar(this)">Guardar</button></div>
+    </mat-card-content>
+</mat-card>we
+
+

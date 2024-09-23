@@ -1,0 +1,18 @@
+<form [formGroup]="studentForm" (ngSubmit)="guardar(studentForm)">  
+    <input matInput #message maxlength="256" formControlName="id" placeholder="id" required />
+    <input formControlName="name" placeholder="nombre" required />
+    <input formControlName="asignatures" placeholder="asignaturas(entre comas)" required />
+</form>
+<!-- 
+
+<mat-form-field class="example-form-field">
+    <input matInput formControlName="id" placeholder="ID" required />
+</mat-form-field>
+<mat-form-field>
+    <input matInput placeholder="Nombre" required />
+</mat-form-field>
+<mat-form-field>
+    <input matInput placeholder="Asignaturas (separadas por comas)" required />
+</mat-form-field>
+
+-->
